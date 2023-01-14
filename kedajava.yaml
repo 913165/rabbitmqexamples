@@ -18,5 +18,5 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080 
-      service:
-        type: LoadBalancer
+  service:
+    type: LoadBalancer
