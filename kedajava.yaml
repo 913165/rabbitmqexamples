@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-keda
-          image: docker.io/tinumistry/demokedajava:keda2 
+          image: docker.io/tinumistry/demokedajava:keda3 
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080 
