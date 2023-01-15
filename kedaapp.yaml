@@ -24,7 +24,7 @@ metadata:
   namespace: default
 spec:
   scaleTargetRef:
-    name: event-service-receiver-deployment
+    name: springboot-service-receiver
   pollingInterval: 20 # Optional. Default: 30 seconds
   cooldownPeriod: 120 # Optional. Default: 300 seconds
   maxReplicaCount: 20 # Optional. Default: 100
