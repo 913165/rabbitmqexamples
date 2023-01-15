@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: springboot-service-receiver
-          image: docker.io/tinumistry/demokedajavaconsumer:keda1
+          image: docker.io/tinumistry/demokedajavaconsumer:keda2
           ports:
             - containerPort: 9096
 ---
