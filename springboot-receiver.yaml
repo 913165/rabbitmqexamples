@@ -13,7 +13,7 @@ spec:
         prometheus.io/scrape: "true"
         prometheus.io/port: "9096"
       labels:
-        app: keda-service-receiver
+        app: springboot-service-receiver
     spec:
       containers:
         - name: springboot-service-receiver
