@@ -3,8 +3,8 @@ kind: Secret
 metadata:
   name: keda-rabbitmq-secret
 data:
-  # base64 encode of 'amqp://guest:guest@rabbitmq-keda-cluster.default.svc.cluster.local:5672'
-  host: YW1xcDovL2d1ZXN0Omd1ZXN0QHJhYmJpdG1xLWtlZGEtY2x1c3Rlci5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsOjU2NzI=
+  # base64 encode of 'amqp://guest:guest@104.154.142.241:5672'
+  host: YW1xcDovL2d1ZXN0Omd1ZXN0QDEwNC4xNTQuMTQyLjI0MTo1Njcy
 ---
 apiVersion: keda.sh/v1alpha1
 kind: TriggerAuthentication
