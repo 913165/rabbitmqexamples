@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: event-service-receiver-deployment
+  name: springboot-service-receiver-deployment
 spec:
   selector:
     matchLabels:
-      app: keda-service-receiver
+      app: springboot-service-receiver
   template:
     metadata:
       annotations:
@@ -16,7 +16,7 @@ spec:
         app: keda-service-receiver
     spec:
       containers:
-        - name: keda-service-receiver
+        - name: springboot-service-receiver
           image: docker.io/tinumistry/demokedajavaconsumer:keda1
           ports:
             - containerPort: 9096
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-boot-keda-service
+  name: spring-boot-receiver-service
 spec:
   type: LoadBalancer
   selector:
-    app: keda-service-receiver
+    app: springboot-service-receiver
   ports:
     - port: 8080            
