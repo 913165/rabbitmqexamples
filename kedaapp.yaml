@@ -32,7 +32,7 @@ spec:
     - type: rabbitmq
       metadata:
         protocol: amqp
-        queueName: queue001
+        queueName: kedaqueue001
         mode: QueueLength
         value: "5"
       authenticationRef:
