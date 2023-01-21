@@ -1,5 +1,5 @@
-apiVersion: keda.sh/v1alpha1
-kind: Scaler
+apiVersion: keda.k8s.io/v1alpha1
+kind: ScaledObject
 metadata:
   name: my-deployment-scaler
   namespace: my-namespace
