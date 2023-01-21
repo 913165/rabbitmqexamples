@@ -13,5 +13,5 @@ spec:
     spec:
       containers:
         - name: java-rabbitmq-consumer
-          image: docker.io/tinumistry/javarabbitmqconsumer:1.6
+          image: docker.io/tinumistry/javarabbitmqconsumer:1.8
           imagePullPolicy: IfNotPresent
