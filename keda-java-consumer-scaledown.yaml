@@ -7,7 +7,7 @@ spec:
   triggers:
   - type: cron
     metadata:
-      cronExpression: "30 21 * * *" # schedule to run at 10 PM IST
+      cronExpression: "30 17 * * *" # schedule to run at 10 PM IST
     scaleTargetRef:
       deploymentName: java-rabbitmq-consumer
     scaleDown:
