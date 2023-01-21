@@ -1,0 +1,25 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: simple-rabbitmq-cluster
+spec:
+  replicas: 1
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 1
+      memory: 2Gi
+  rabbitmq:
+    additionalConfig: |
+      log.console.level = info
+      collect_statistics_interval = 10000
+	  default_permissions.configure = .*
+	  default_permissions.read = .*
+	  default_permissions.write = .*
+      default_user= guest 
+      default_pass = guest
+      default_user_tags.administrator = true
+  service:
+    type: LoadBalancer
