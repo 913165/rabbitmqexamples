@@ -1,5 +1,5 @@
 
-# Keda Java Consumber with RabbitMQ kubernetes cluster
+# Keda Java Consumer with RabbitMQ kubernetes cluster
 
 A brief description of what this project does and who it's for
 
