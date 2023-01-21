@@ -16,7 +16,7 @@ kubectl apply -f https://github.com/kedacore/keda/releases/download/v2.0.0/keda-
 
 ## Create java rabbitmq consumer deployment 
 ```
-kubectl apply -f https://raw.githubusercontent.com/913165/rabbitmqexamples/main/java-rabbitmq-consumer.yaml)
+kubectl apply -f https://raw.githubusercontent.com/913165/rabbitmqexamples/main/java-rabbitmq-consumer.yaml
 ```
 
 ## Create keda scalerobject targeting java rabbitmq consumer deployment 
