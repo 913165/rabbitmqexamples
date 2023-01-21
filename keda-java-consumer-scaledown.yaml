@@ -1,0 +1,14 @@
+apiVersion: keda.sh/v1alpha1
+kind: Scaler
+metadata:
+  name: my-deployment-scaler
+  namespace: my-namespace
+spec:
+  triggers:
+  - type: cron
+    metadata:
+      cronExpression: "30 21 * * *" # schedule to run at 10 PM IST
+    scaleTargetRef:
+      deploymentName: java-rabbitmq-consumer
+    scaleDown:
+      value: 0
