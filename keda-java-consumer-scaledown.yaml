@@ -1,14 +1,16 @@
 apiVersion: keda.sh/v1alpha1
 kind: ScaledObject
 metadata:
-  name: my-deployment-scaler
+  name: rabbitmq-scaledobject
   namespace: default
 spec:
+  scaleTargetRef:
+    name: java-rabbitmq-consumer
+  pollingInterval: 5 # Optional. Default: 30 seconds
+  cooldownPeriod: 120 # Optional. Default: 300 seconds
+  maxReplicaCount: 20 # Optional. Default: 100
   triggers:
-  - type: cron
-    metadata:
-      cronExpression: "30 17 * * *" # schedule to run at 10 PM IST
-    scaleTargetRef:
-      deploymentName: java-rabbitmq-consumer
-    scaleDown:
-      value: 0
+    - type: cron
+      metadata:
+        cronExpression: "30 17 * * *" # schedule to run at 10 PM IST
+        scaleDown:0
