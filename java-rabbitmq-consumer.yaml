@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: java-rabbitmq-consumer
+spec:
+  selector:
+    matchLabels:
+      app: java-rabbitmq-consumer
+  template:
+    metadata:
+      labels:
+        app: java-rabbitmq-consumer
+    spec:
+      containers:
+        - name: java-rabbitmq-consumer
+          image: docker.io/tinumistry/javarabbitmqconsumer:1.3
+          imagePullPolicy: IfNotPresent
