@@ -21,5 +21,5 @@ kubectl apply -f https://raw.githubusercontent.com/913165/rabbitmqexamples/main/
 
 ## Create keda scalerobject targeting java rabbitmq consumer deployment 
 ```
-https://raw.githubusercontent.com/913165/rabbitmqexamples/main/keda-java-consumer.yaml
+kubectl apply -f https://raw.githubusercontent.com/913165/rabbitmqexamples/main/keda-java-consumer.yaml
 ```
