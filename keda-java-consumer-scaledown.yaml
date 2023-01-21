@@ -2,7 +2,7 @@ apiVersion: keda.k8s.io/v1alpha1
 kind: ScaledObject
 metadata:
   name: my-deployment-scaler
-  namespace: my-namespace
+  namespace: default
 spec:
   triggers:
   - type: cron
