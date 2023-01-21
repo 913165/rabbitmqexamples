@@ -16,4 +16,4 @@ spec:
         queueName: hello_queue
         mode: QueueLength
         value: "5"
-        host: amqp://guest:guest@34.136.40.53:5672
+        host: amqp://guest:guest@20.59.116.146:5672
