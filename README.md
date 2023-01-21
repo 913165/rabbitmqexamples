@@ -14,4 +14,6 @@ There is a RabbitMQ cluster operator for Kubernetes, which allows you to deploy 
 kubectl apply -f https://github.com/kedacore/keda/releases/download/v2.0.0/keda-2.0.0.yaml
 ```
 
-
+```
+https://raw.githubusercontent.com/913165/rabbitmqexamples/main/keda-java-consumer.yaml
+```
