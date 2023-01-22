@@ -3,7 +3,7 @@ kind: Secret
 metadata:
   name: rb-conn-secret
 data:
-  host:YW1xcDovL2d1ZXN0Omd1ZXN0QDIwLjIyOC4xMjYuMjM5OjU2NzI=
+  host: YW1xcDovL2d1ZXN0Omd1ZXN0QDIwLjIyOC4xMjYuMjM5OjU2NzI=
   
 ---
 apiVersion: keda.sh/v1alpha1
