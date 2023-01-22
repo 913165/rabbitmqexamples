@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: rb-conn-secret
+data:
+  host:YW1xcDovL2d1ZXN0Omd1ZXN0QDIwLjIyOC4xMjYuMjM5OjU2NzI=
+  
+---
+apiVersion: keda.sh/v1alpha1
+kind: TriggerAuthentication
+metadata:
+  name: rb-trigger-auth-conn
+  namespace: default
+spec:
+  secretTargetRef:
+    - parameter: host
+      name: rb-conn-secret
+      key: host
+---
+
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: rabbitmq-scaledobject
+  namespace: default
+spec:
+  scaleTargetRef:
+    name: java-rabbitmq-consumer
+  pollingInterval: 5 # Optional. Default: 30 seconds
+  cooldownPeriod: 120 # Optional. Default: 300 seconds
+  maxReplicaCount: 20 # Optional. Default: 100
+  triggers:
+    - type: rabbitmq
+      metadata:
+        protocol: amqp
+        queueName: queue001
+        mode: QueueLength
+        value: "5"
+      authenticationRef:
+        name: rb-trigger-auth-conn   
