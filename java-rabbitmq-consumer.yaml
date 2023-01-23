@@ -3,7 +3,7 @@ kind: Deployment # Kubernetes resource kind we are creating
 metadata:
   name: java-rabbitmq-consumer
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
       app: java-rabbitmq-consumer
