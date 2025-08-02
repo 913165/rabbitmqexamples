@@ -1,0 +1,9 @@
+steps to install rabbitmq in digital ocean.
+
+  create kubernates cluster with autoscale enabled
+
+  download kubeconfig file and put it into your folder
+
+  run below command 
+
+set KUBECONFIG=C:\do\k8s-1-33-1-do-2-blr1-1754049835114-kubeconfig.yaml
