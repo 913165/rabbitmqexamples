@@ -75,8 +75,33 @@ To verify your RabbitMQ installation is working:
 
 3. Access the management interface using the LoadBalancer IP and default credentials
 
+## Step 6: Install KEDA (Kubernetes Event-Driven Autoscaler)
+
+KEDA allows your applications to scale based on event sources like RabbitMQ queue length.
+
+### Installing KEDA
+
+1. Add the official KEDA Helm repository:
+   ```bash
+   helm repo add kedacore https://kedacore.github.io/charts  
+   helm repo update
+   ```
+
+2. Install KEDA using Helm 3:
+   ```bash
+   helm install keda kedacore/keda --namespace keda --create-namespace
+   ```
+
+3. Verify KEDA installation:
+   ```bash
+   kubectl get pods -n keda
+   ```
+
+This command installs KEDA in a dedicated namespace (`keda`). You can customize the installation by passing additional configuration values with `--set`, allowing you to adjust parameters like replica counts, scaling metrics, or logging levels.
+
 ## Notes
 
 - Make sure your Digital Ocean LoadBalancer is properly configured to allow traffic on port 15672
 - Consider changing default credentials for production environments
 - The autoscale feature will automatically adjust the number of nodes based on resource usage
+- KEDA enables event-driven autoscaling based on RabbitMQ queue metrics and other event sources
